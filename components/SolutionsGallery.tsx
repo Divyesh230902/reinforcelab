@@ -1,0 +1,68 @@
+// --- Section: Solutions Gallery ---
+"use client";
+
+import { solutions } from "@/content/data";
+import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { motion } from "framer-motion";
+
+export function SolutionsGallery() {
+  return (
+    <section id="solutions" className="section-container">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={staggerChildren}
+        className="mx-auto max-w-3xl text-center"
+      >
+        <motion.span
+          variants={fadeInUp}
+          className="text-sm font-semibold uppercase tracking-[0.3em] text-brand-teal"
+        >
+          Solutions
+        </motion.span>
+        <motion.h2 variants={fadeInUp} className="section-title mt-4">
+          Built-for-Impact RL Solution Gallery
+        </motion.h2>
+        <motion.p variants={fadeInUp} className="mt-4 text-white/70">
+          Deploy pre-architected accelerators across growth, operations, and
+          intelligence workloads. Each tile fuses policy logic, governance, and
+          measurement to jumpstart production impact.
+        </motion.p>
+      </motion.div>
+      <motion.div
+        variants={staggerChildren}
+        initial="hidden"
+        animate="visible"
+        className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
+        {solutions.map((solution) => (
+          <motion.div
+            key={solution.name}
+            variants={fadeInUp}
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 shadow-glow transition hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-indigo/30"
+          >
+            <div className="absolute inset-0 bg-gradient-conic opacity-10" />
+            <div className="relative">
+              <div className="flex items-center gap-3">
+                <span className="h-8 w-8 rounded-xl bg-brand-indigo/60" />
+                <h3 className="font-display text-lg text-white">
+                  {solution.name}
+                </h3>
+              </div>
+              <p className="mt-4 text-sm text-white/70">{solution.summary}</p>
+              <ul className="mt-5 space-y-3 text-sm text-white/60">
+                {solution.details.map((detail) => (
+                  <li key={detail} className="flex items-start gap-2">
+                    <span className="mt-1 h-1.5 w-1.5 rounded-full bg-brand-sky" />
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
+}
+
