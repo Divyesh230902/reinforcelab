@@ -60,28 +60,6 @@ export function HeroSection() {
             Explore Services
           </a>
         </motion.div>
-        <motion.div
-          variants={fadeInUp}
-          className="mt-10 flex flex-col gap-3 text-white/60"
-        >
-          <span className="text-xs uppercase tracking-[0.3em] text-white/50">
-            Trusted by adaptive intelligence teams
-          </span>
-          <div className="flex flex-wrap items-center gap-3">
-            {["ApexOps", "NovaGrid", "Helix", "Vertex", "Atlas"].map((name) => (
-              <motion.div
-                key={name}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="flex h-10 items-center gap-2 rounded-xl border border-white/10 bg-gradient-to-r from-white/10 via-white/5 to-white/10 px-4"
-              >
-                <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-brand-indigo via-brand-teal to-brand-sky text-[10px] font-black uppercase text-white">
-                  {name.slice(0, 2)}
-                </span>
-                <span className="text-sm text-white/70">{name}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 0.96 }}
