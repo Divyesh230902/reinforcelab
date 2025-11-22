@@ -24,9 +24,9 @@ export function SolutionsGallery() {
           Built-for-Impact RL Solution Gallery
         </motion.h2>
         <motion.p variants={fadeInUp} className="mt-4 text-white/70">
-          Deploy pre-architected accelerators across growth, operations, and
-          intelligence workloads. Each tile fuses policy logic, governance, and
-          measurement to jumpstart production impact.
+          Each solution ships with embedded measurement, governance, and
+          Agentic Guardrails to jumpstart production impact across growth,
+          operations, and intelligence workloads.
         </motion.p>
       </motion.div>
       <motion.div
@@ -39,6 +39,7 @@ export function SolutionsGallery() {
           <motion.div
             key={solution.name}
             variants={fadeInUp}
+            whileHover={{ y: -10, scale: 1.02 }}
             className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 shadow-glow transition hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-indigo/30"
           >
             <div className="absolute inset-0 bg-gradient-conic opacity-10" />
@@ -65,4 +66,3 @@ export function SolutionsGallery() {
     </section>
   );
 }
-

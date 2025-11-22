@@ -24,9 +24,9 @@ export function ResearchSection() {
           Shaping the Next Wave of Adaptive Intelligence
         </motion.h2>
         <motion.p variants={fadeInUp} className="mt-4 text-white/70">
-          ReinforceLab invests in frameworks that balance performance, safety,
-          and value alignment. Our research pillars ensure every deployment is
-          benchmarked, introspective, and culturally responsible.
+          ReinforceLab invests in frameworks that push the boundaries of
+          performance, safety, and cultural alignment so every deployment stays
+          benchmarked, introspective, and responsible.
         </motion.p>
       </motion.div>
       <motion.div
@@ -49,4 +49,3 @@ export function ResearchSection() {
     </section>
   );
 }
-

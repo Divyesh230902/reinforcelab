@@ -19,29 +19,32 @@ export function WhyChooseSection() {
             Why Choose ReinforceLab
           </span>
           <h2 className="section-title">
-            Enterprise-grade guardrails with measurable impact.
+            Agentic Guardrails with measurable impact.
           </h2>
           <p className="text-white/70">
-            ReinforceLab combines AgentOps observability, zero-trust security,
-            and executive-grade analytics to orchestrate adaptive systems you
-            can audit, govern, and scale. We measure success in operational
-            outcomes—not just offline benchmarks.
+            The next generation of adaptive intelligence requires more than
+            clever policies—it needs Agentic Guardrails that ensure safety,
+            alignment, and reliability across the entire decision lifecycle.
           </p>
           <ul className="space-y-3 text-sm text-white/70">
             <li className="flex gap-3">
               <span className="h-2.5 w-2.5 translate-y-2 rounded-full bg-brand-indigo" />
-              Continuous human-feedback integration keeps policies aligned with
-              evolving business and ethical guidelines.
+              AgentOps observability with 45+ prebuilt monitors.
             </li>
             <li className="flex gap-3">
               <span className="h-2.5 w-2.5 translate-y-2 rounded-full bg-brand-teal" />
-              Built-in reward shaping and safety throttles protect against
-              negative externalities in high-stakes environments.
+              Agentic Guardrails that enforce alignment and prevent harmful
+              actions.
             </li>
             <li className="flex gap-3">
               <span className="h-2.5 w-2.5 translate-y-2 rounded-full bg-brand-sky" />
-              AgentOps dashboards surface drift, fairness, and ROI metrics for
-              leadership-ready reporting.
+              Reward shaping, safety throttles, and human feedback loops for
+              evolving constraints.
+            </li>
+            <li className="flex gap-3">
+              <span className="h-2.5 w-2.5 translate-y-2 rounded-full bg-white/70" />
+              Leadership-ready dashboards showing fairness, drift, and ROI
+              metrics.
             </li>
           </ul>
         </motion.div>
@@ -50,7 +53,11 @@ export function WhyChooseSection() {
           className="glass-panel grid gap-6 rounded-3xl p-6 md:grid-cols-3"
         >
           {metrics.map((metric) => (
-            <div key={metric.label} className="rounded-2xl bg-white/5 p-4">
+            <motion.div
+              key={metric.label}
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="rounded-2xl bg-white/5 p-4"
+            >
               <p className="text-xs uppercase tracking-[0.2em] text-white/50">
                 {metric.label}
               </p>
@@ -58,11 +65,10 @@ export function WhyChooseSection() {
                 {metric.stat}
               </p>
               <p className="mt-2 text-xs text-white/60">{metric.description}</p>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </motion.div>
     </section>
   );
 }
-

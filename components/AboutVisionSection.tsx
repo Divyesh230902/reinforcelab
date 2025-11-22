@@ -18,13 +18,13 @@ export function AboutVisionSection() {
             About ReinforceLab
           </span>
           <h2 className="section-title">
-            Mission: Translate reward signals into durable business value.
+            Mission: Translate reward signals into durable, auditable, high-impact business value.
           </h2>
           <p className="text-white/70">
-            ReinforceLab was founded to close the gap between research-grade RL
-            and enterprise transformation. We align stakeholders around adaptive
-            intelligence programs that deliver measurable impact—from strategic
-            roadmaps and simulation sandboxes to deployed policies and ongoing
+            ReinforceLab bridges the gap between cutting-edge RL research and
+            enterprise deployment. We align cross-functional teams around
+            adaptive intelligence programs that deliver measurable results
+            across strategy, simulation, policy deployment, and ongoing
             governance.
           </p>
         </motion.div>
@@ -33,21 +33,18 @@ export function AboutVisionSection() {
           className="glass-panel rounded-3xl p-6 text-sm text-white/70"
         >
           <p>
-            Our teams blend reinforcement learning scientists, systems
-            engineers, and AgentOps specialists. Together we orchestrate
-            adaptive pipelines that respect regulatory requirements, capture
-            human feedback, and evolve alongside your market realities. We build
-            with transparency so your teams inherit living systems—not black
-            boxes.
+            Our teams combine RL scientists, systems engineers, and AgentOps
+            specialists who design transparent, evolving, and regulation-ready
+            adaptive systems. We build learning pipelines your teams can
+            inherit, understand, and trust.
           </p>
           <p className="mt-4">
-            Vision: make continuous learning a managed capability for every
-            enterprise—where experimentation cycles are explainable, ethical,
-            and economically aligned with every decision maker.
+            Vision: Make continuous learning a scalable, managed capability for
+            every enterprise—explainable, ethical, and economically aligned
+            with every decision maker.
           </p>
         </motion.div>
       </motion.div>
     </section>
   );
 }
-

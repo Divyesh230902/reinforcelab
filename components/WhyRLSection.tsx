@@ -24,10 +24,10 @@ export function WhyRLSection() {
           Why Reinforcement Learning Now
         </motion.h2>
         <motion.p variants={fadeInUp} className="mt-4 text-white/70">
-          We go past static prompts, one-off fine-tunes, and hindsight-only
-          analytics. ReinforceLab creates adaptive systems that experiment,
-          learn, and improve with every decision cycle—keeping your enterprise
-          relevant in markets that refuse to stay still.
+          Static prompts, fine-tunes, and retrospective analytics can't keep
+          pace with dynamic markets. ReinforceLab builds adaptive systems that
+          experiment, learn, and improve with every decision cycle—keeping your
+          enterprise responsive, resilient, and ahead.
         </motion.p>
       </motion.div>
       <motion.div
@@ -40,6 +40,7 @@ export function WhyRLSection() {
           <motion.div
             key={card.title}
             variants={fadeInUp}
+            whileHover={{ y: -6, scale: 1.02 }}
             className="glass-panel h-full rounded-3xl p-6"
           >
             <h3 className="font-display text-xl text-white">{card.title}</h3>
@@ -50,4 +51,3 @@ export function WhyRLSection() {
     </section>
   );
 }
-

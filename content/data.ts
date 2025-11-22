@@ -2,22 +2,22 @@ export const highlightCards = [
   {
     title: "Tailored Learning Environments",
     description:
-      "Design domain-specific simulators where agents can explore safely before they ever touch production."
+      "Domain-specific simulators let agents explore safely before production."
   },
   {
     title: "Actively Learning AI Agents",
     description:
-      "Deploy agents that ingest real feedback loops, adapting policies as objectives and constraints evolve."
+      "Policies evolve in real time based on fresh feedback loops."
   },
   {
     title: "Simulation-First Experimentation",
     description:
-      "Model permutations, stress test strategies, and surface emergent behaviors across complex scenarios."
+      "Stress test strategies, analyze edge cases, and surface emergent behavior at scale."
   },
   {
-    title: "Beyond Conventional AI Pipelines",
+    title: "Adaptive Decision Systems",
     description:
-      "Evolve from static LLM workflows to adaptive decision systems that deliver measurable business outcomes."
+      "Evolve from static LLM workflows to continuous-learning pipelines that deliver measurable outcomes."
   }
 ];
 
@@ -25,61 +25,62 @@ export const services = [
   {
     name: "Adaptive Intelligence Consulting",
     summary:
-      "Blueprint reinforcement learning programs that align KPIs with reward design and strategic impact.",
+      "Translate business objectives into RL frameworks and experimentation roadmaps.",
     details: [
-      "Translate business goals into reinforcement learning frameworks and experimentation roadmaps.",
-      "Map KPIs to reward signals, identify adaptive automation opportunities, and define ROI metrics.",
-      "Bridge data science with operations to deliver continuous learning transformations."
+      "Translate business objectives into RL frameworks and experimentation roadmaps.",
+      "Align KPIs with reward design and long-term strategic impact.",
+      "Identify automation opportunities and define ROI metrics.",
+      "Connect data science and operations into unified adaptive workflows."
     ]
   },
   {
     name: "Simulation Environment Design",
     summary:
-      "Craft synthetic environments that de-risk policy learning before high-stakes deployment.",
+      "Build synthetic environments that de-risk policy learning.",
     details: [
-      "Build virtual testbeds across pricing, logistics, and marketing use cases with real-world data.",
-      "Model feedback loops, multi-agent dynamics, and event rarity to accelerate policy robustness.",
-      "Provision scalable cloud or edge environments with observability baked in."
+      "Build synthetic environments that de-risk policy learning.",
+      "Model multi-agent dynamics, rare events, and complex feedback loops.",
+      "Accelerate policy robustness via controlled experiments.",
+      "Deploy cloud or edge simulators with observability built-in."
     ]
   },
   {
-    name: "Policy Learning and Optimization",
+    name: "Policy Learning & Optimization",
     summary:
-      "Engineer adaptive policies that thrive amid market volatility and operational complexity.",
+      "Engineer adaptive policies for volatile, high-variance environments.",
     details: [
-      "Leverage bandits, Deep Q-Learning, and continual learning pipelines across historical and live data.",
-      "Shape rewards to mirror business constraints and maintain balanced exploration-exploitation.",
-      "Benchmark policies across simulation and production footprints with safety gates."
+      "Apply bandits, DQN, actor-critic methods, and continual learning.",
+      "Shape rewards to reflect constraints and maintain exploration balance.",
+      "Benchmark across simulation and production with safety gates."
     ]
   },
   {
-    name: "RL Integration and Deployment",
+    name: "RL Integration & Deployment",
     summary:
-      "Embed adaptive decision layers seamlessly inside enterprise stacks and workflows.",
+      "Embed decision layers within CRM, ERP, and workflow systems.",
     details: [
-      "Expose policy APIs into CRM, ERP, and recommender systems with secure guardrails.",
-      "Support low-latency inference, CI/CD retraining, and compliance-grade observability.",
-      "Harmonize with existing data pipelines and monitoring ecosystems."
+      "Provide secure policy APIs with runtime guardrails.",
+      "Enable low-latency inference, CI/CD retraining, and observability.",
+      "Align fully with existing data ecosystems."
     ]
   },
   {
     name: "Managed RL-as-a-Service",
     summary:
-      "Operate reinforcement learning systems end-to-end with outcome-based SLAs.",
+      "Full RL operations with outcome-based SLAs.",
     details: [
-      "Deliver plug-and-play infrastructure that supports multi-agent workloads at scale.",
-      "Automate evaluation, drift correction, versioning, and policy rollouts.",
-      "Run feedback-driven retraining cycles and performance operations under one managed service."
+      "Multi-agent workload support at scale.",
+      "Automated evaluation, drift correction, versioning, and rollouts.",
+      "Continuous retraining based on live feedback signals."
     ]
   },
   {
-    name: "Analytics and Governance",
-    summary:
-      "Provide the transparency and accountability adaptive systems demand.",
+    name: "Analytics & Governance",
+    summary: "Executive-ready transparency into adaptive systems.",
     details: [
-      "Produce interpretability dossiers, ROI audits, and fairness diagnostics.",
-      "Maintain executive-ready dashboards covering compliance, ethics, and real-world impact.",
-      "Instrument continuous analytics to monitor outcomes and reinforce trust."
+      "Interpretability reports, fairness audits, and ROI tracking.",
+      "Governance dashboards for compliance, ethics, and real-world impact.",
+      "Continuous monitoring to reinforce trust and alignment."
     ]
   }
 ];
@@ -88,61 +89,61 @@ export const solutions = [
   {
     name: "Adaptive Recommendation Engine",
     summary:
-      "Personalize content sequencing with ensemble bandits and hierarchical clustering.",
+      "Ensemble bandits + hierarchical clustering for in-the-moment personalization.",
     details: [
-      "Learns from user behavior and context to balance discovery with conversion.",
-      "Adapts to price sensitivity and trend signals across digital touchpoints.",
-      "Plugs into e-commerce and media platforms to boost retention and LTV."
+      "Learns from user behavior and context in real time.",
+      "Balances exploration, conversion, and trend sensitivity.",
+      "Plugs into e-commerce and media systems."
     ]
   },
   {
     name: "Dynamic Pricing & Demand Optimization",
     summary:
-      "Optimize margin and conversion with RL-driven pricing that reacts in real time.",
+      "RL-driven real-time pricing adjustments.",
     details: [
-      "Models elasticity, competitor response, and seasonality with multi-objective rewards.",
-      "Executes adaptive price testing and contextual experiments continuously.",
-      "Serves retail, SaaS, and travel scenarios with rigorous guardrails."
+      "Models elasticity, competition, and seasonality.",
+      "Continuous contextual experimentation under safety controls.",
+      "Tuned for retail, SaaS, and travel."
     ]
   },
   {
     name: "Operational Workflow Optimizer",
     summary:
-      "Continuously streamline operations with agents that learn from every task.",
+      "Agents that streamline operations by learning from every task.",
     details: [
-      "Automates scheduling, routing, and prioritization with reinforcement signals.",
-      "Predicts downtime, reallocates resources, and scales with demand fluctuations.",
-      "Integrates with ERP, logistics, and workflow platforms to cut cost and latency."
+      "Automates routing, scheduling, and resource allocation.",
+      "Predicts delays and rebalances workloads.",
+      "Integrates with logistics and ERP systems."
     ]
   },
   {
     name: "Personalized Engagement Engine",
     summary:
-      "Evolve marketing pipelines with campaigns that self-tune for lifetime value.",
+      "Campaigns that self-tune based on reward signals.",
     details: [
-      "Optimizes message cadence, channel selection, and tone in real time.",
-      "Sequences experiences across the customer journey using reward shaping.",
-      "Connects to CRM and marketing automation for closed-loop learning."
+      "Optimizes cadence, channel, tone, and sequencing.",
+      "Learns across the customer journey.",
+      "Connects to CRM and marketing automation stacks."
     ]
   },
   {
     name: "Resource Allocation & Simulation Suite",
     summary:
-      "Model complex environments to orchestrate assets, fleets, and supply chains.",
+      "Multi-agent simulation for fleets, supply chains, and infrastructure.",
     details: [
-      "Simulates logistics, traffic, energy, or IoT scenarios with sensor feedback.",
-      "Runs sensitivity analyses and stress tests for multi-agent coordination.",
-      "Delivers APIs and dashboards for operations teams to operationalize insight."
+      "Stress tests, rare event modeling, and sensitivity analyses.",
+      "Sensor-driven real-time coordination logic.",
+      "APIs and dashboards for operations teams."
     ]
   },
   {
     name: "Decision Intelligence Dashboard",
     summary:
-      "Deliver executive transparency into every adaptive decision cycle.",
+      "Full transparency into every policy decision.",
     details: [
-      "Visualizes policy evolution, reward curves, and comparative performance.",
-      "Supports explainability, compliance reporting, and BI integrations.",
-      "Automates governance workflows with auditable intelligence."
+      "Reward curves, drift charts, governance metrics.",
+      "Built-in explainability and compliance reporting.",
+      "Automates oversight with auditable outputs."
     ]
   }
 ];
@@ -175,19 +176,19 @@ export const metrics = [
     label: "AgentOps Observability",
     stat: "45+",
     description:
-      "prebuilt monitors track policy drift, governance, and in-flight performance."
+      "prebuilt monitors track policy drift, fairness, governance, and ROI in flight."
   },
   {
-    label: "Enterprise-Grade Security",
-    stat: "SOC 2",
+    label: "Agentic Guardrails",
+    stat: "Zero-Trust",
     description:
-      "aligned controls with data residency, access auditing, and zero-trust deployment."
+      "alignment controls, safety throttles, and runtime prevention for harmful actions."
   },
   {
-    label: "ROI Acceleration",
+    label: "ROI Realization",
     stat: "8-12 mo",
     description:
-      "average time to measurable uplift across pricing, operations, and engagement programs."
+      "time to measurable uplift across pricing, operations, logistics, and engagement programs."
   }
 ];
 
@@ -198,4 +199,3 @@ export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" }
 ];
-

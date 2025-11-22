@@ -20,7 +20,7 @@ export function HeroSection() {
           variants={fadeInUp}
           className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.2em] text-white/70"
         >
-          From Rewards to Reality
+          ReinforceLab
         </motion.span>
         <motion.h1
           variants={fadeInUp}
@@ -30,12 +30,18 @@ export function HeroSection() {
         </motion.h1>
         <motion.p
           variants={fadeInUp}
+          className="mt-2 text-lg font-semibold text-brand-teal"
+        >
+          Agentic Guardrails for every adaptive decision.
+        </motion.p>
+        <motion.p
+          variants={fadeInUp}
           className="mt-6 text-lg text-white/80"
         >
           ReinforceLab empowers enterprises with adaptive, goal-driven AI
           systems that continuously learn from interaction, feedback, and
-          results. We translate reward signals into real-world impact across
-          pricing, operations, and engagement programs.
+          outcomes. We convert reward signals into tangible business impact
+          across pricing, operations, logistics, and engagement programs.
         </motion.p>
         <motion.div
           variants={fadeInUp}
@@ -71,26 +77,42 @@ export function HeroSection() {
               </span>
             </div>
             <div className="grid grid-cols-2 gap-4 text-sm text-white/70">
-              <div className="rounded-2xl bg-white/5 p-4">
+              <motion.div
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="rounded-2xl bg-white/5 p-4"
+              >
                 <p className="text-xs uppercase text-white/50">AgentOps</p>
                 <p className="mt-2 text-lg font-semibold text-white">45+</p>
                 <p>Adaptive monitors across deployments</p>
-              </div>
-              <div className="rounded-2xl bg-white/5 p-4">
-                <p className="text-xs uppercase text-white/50">Security</p>
-                <p className="mt-2 text-lg font-semibold text-white">SOC 2</p>
-                <p>Aligned controls and zero-trust posture</p>
-              </div>
-              <div className="rounded-2xl bg-white/5 p-4">
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="rounded-2xl bg-white/5 p-4"
+              >
+                <p className="text-xs uppercase text-white/50">
+                  Agentic Guardrails
+                </p>
+                <p className="mt-2 text-lg font-semibold text-white">
+                  Zero-Trust
+                </p>
+                <p>Alignment controls and runtime safety</p>
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="rounded-2xl bg-white/5 p-4"
+              >
                 <p className="text-xs uppercase text-white/50">Policy Library</p>
                 <p className="mt-2 text-lg font-semibold text-white">120+</p>
-                <p>Reusable RL templates for enterprise workflows</p>
-              </div>
-              <div className="rounded-2xl bg-white/5 p-4">
+                <p>Reusable RL templates</p>
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="rounded-2xl bg-white/5 p-4"
+              >
                 <p className="text-xs uppercase text-white/50">Impact</p>
                 <p className="mt-2 text-lg font-semibold text-white">3x</p>
                 <p>Average uplift across pricing and ops pilots</p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -98,4 +120,3 @@ export function HeroSection() {
     </section>
   );
 }
-

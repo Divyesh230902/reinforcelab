@@ -24,10 +24,9 @@ export function ServicesSection() {
           Reinforcement Learning, Delivered End-to-End
         </motion.h2>
         <motion.p variants={fadeInUp} className="mt-4 text-white/70">
-          Our six-part services suite aligns strategy, simulation, policy
-          engineering, deployment, operations, and governance. Each engagement
-          is built to move from proof of value into production-scale impact
-          without losing oversight.
+          Our six-part service suite spans strategy, simulation, policy
+          engineering, deployment, operations, and governance—designed to move
+          engagements from proof-of-value to production-grade impact.
         </motion.p>
       </motion.div>
       <motion.div
@@ -40,6 +39,7 @@ export function ServicesSection() {
           <motion.article
             key={service.name}
             variants={fadeInUp}
+            whileHover={{ y: -8, scale: 1.02 }}
             className="glass-panel flex h-full flex-col rounded-3xl p-6"
           >
             <div className="flex items-center gap-3">
@@ -61,4 +61,3 @@ export function ServicesSection() {
     </section>
   );
 }
-
