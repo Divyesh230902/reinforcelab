@@ -1,7 +1,7 @@
 // --- Section: About & Vision ---
 "use client";
 
-import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { fadeInUp, staggerChildren, viewportConfig } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 export function AboutVisionSection() {
@@ -9,7 +9,8 @@ export function AboutVisionSection() {
     <section id="about" className="section-container">
       <motion.div
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         variants={staggerChildren}
         className="grid gap-10 lg:grid-cols-2"
       >

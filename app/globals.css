@@ -22,3 +22,20 @@ body {
   @apply font-display text-3xl tracking-tight text-white md:text-4xl;
 }
 
+@keyframes bg-pan {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.simulation-grid {
+  background-size: 200% 200%;
+  animation: bg-pan 18s ease-in-out infinite;
+  mix-blend-mode: screen;
+}

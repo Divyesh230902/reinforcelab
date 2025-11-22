@@ -69,6 +69,17 @@ export function HeroSection() {
       >
         <div className="glass-panel relative overflow-hidden rounded-3xl p-8 shadow-glow">
           <div className="absolute inset-0 bg-gradient-conic opacity-60" />
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 22, ease: "linear", repeat: Infinity }}
+            className="pointer-events-none absolute -left-16 -top-16 h-60 w-60 rounded-full border border-brand-indigo/30"
+          />
+          <motion.div
+            animate={{ rotate: -360 }}
+            transition={{ duration: 26, ease: "linear", repeat: Infinity }}
+            className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full border border-brand-teal/25"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(40,208,200,0.18),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(57,69,255,0.16),transparent_32%),radial-gradient(circle_at_60%_70%,rgba(91,208,255,0.12),transparent_30%)] simulation-grid" />
           <div className="relative space-y-6">
             <div className="flex items-center justify-between">
               <p className="font-display text-4xl text-white">8-12 mo</p>

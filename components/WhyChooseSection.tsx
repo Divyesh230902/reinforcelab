@@ -2,7 +2,7 @@
 "use client";
 
 import { metrics } from "@/content/data";
-import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { fadeInUp, staggerChildren, viewportConfig } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 export function WhyChooseSection() {
@@ -10,7 +10,8 @@ export function WhyChooseSection() {
     <section id="why-choose" className="section-container">
       <motion.div
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         variants={staggerChildren}
         className="grid gap-12 lg:grid-cols-2 lg:items-center"
       >

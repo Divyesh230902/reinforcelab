@@ -2,7 +2,7 @@
 "use client";
 
 import { highlightCards } from "@/content/data";
-import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { fadeInUp, staggerChildren, viewportConfig } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 export function WhyRLSection() {
@@ -11,7 +11,8 @@ export function WhyRLSection() {
       <motion.div
         className="mx-auto max-w-3xl text-center"
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         variants={staggerChildren}
       >
         <motion.span
@@ -33,7 +34,8 @@ export function WhyRLSection() {
       <motion.div
         variants={staggerChildren}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         className="mt-14 grid gap-6 md:grid-cols-2"
       >
         {highlightCards.map((card) => (

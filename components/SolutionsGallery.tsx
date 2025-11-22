@@ -2,7 +2,7 @@
 "use client";
 
 import { solutions } from "@/content/data";
-import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { fadeInUp, staggerChildren, viewportConfig } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 export function SolutionsGallery() {
@@ -10,7 +10,8 @@ export function SolutionsGallery() {
     <section id="solutions" className="section-container">
       <motion.div
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         variants={staggerChildren}
         className="mx-auto max-w-3xl text-center"
       >
@@ -32,7 +33,8 @@ export function SolutionsGallery() {
       <motion.div
         variants={staggerChildren}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
       >
         {solutions.map((solution) => (

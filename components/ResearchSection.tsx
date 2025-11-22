@@ -2,7 +2,7 @@
 "use client";
 
 import { researchPillars } from "@/content/data";
-import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { fadeInUp, staggerChildren, viewportConfig } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 export function ResearchSection() {
@@ -10,7 +10,8 @@ export function ResearchSection() {
     <section id="research" className="section-container">
       <motion.div
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         variants={staggerChildren}
         className="mx-auto max-w-3xl text-center"
       >
@@ -32,7 +33,8 @@ export function ResearchSection() {
       <motion.div
         variants={staggerChildren}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         className="mt-14 grid gap-6 md:grid-cols-2"
       >
         {researchPillars.map((pillar) => (

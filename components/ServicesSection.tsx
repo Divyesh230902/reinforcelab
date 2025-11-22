@@ -2,7 +2,7 @@
 "use client";
 
 import { services } from "@/content/data";
-import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { fadeInUp, staggerChildren, viewportConfig } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 export function ServicesSection() {
@@ -10,7 +10,8 @@ export function ServicesSection() {
     <section id="services" className="section-container">
       <motion.div
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         variants={staggerChildren}
         className="mx-auto max-w-3xl text-center"
       >
@@ -32,7 +33,8 @@ export function ServicesSection() {
       <motion.div
         variants={staggerChildren}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         className="mt-16 grid gap-6 lg:grid-cols-3"
       >
         {services.map((service) => (

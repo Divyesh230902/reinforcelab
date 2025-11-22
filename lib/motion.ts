@@ -18,3 +18,5 @@ export const staggerChildren: Variants = {
   }
 };
 
+// Consistent viewport trigger for scroll-based reveals.
+export const viewportConfig = { once: true, amount: 0.2 };

@@ -1,7 +1,7 @@
 // --- Section: Contact / Demo Request ---
 "use client";
 
-import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { fadeInUp, staggerChildren, viewportConfig } from "@/lib/motion";
 import { motion } from "framer-motion";
 
 export function ContactSection() {
@@ -9,7 +9,8 @@ export function ContactSection() {
     <section id="contact" className="section-container">
       <motion.div
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         variants={staggerChildren}
         className="mx-auto max-w-3xl text-center"
       >
@@ -31,7 +32,8 @@ export function ContactSection() {
       <motion.form
         variants={staggerChildren}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={viewportConfig}
         className="mt-12 glass-panel mx-auto max-w-3xl space-y-6 rounded-3xl p-8 text-left"
       >
         <div className="grid gap-6 md:grid-cols-2">
@@ -101,4 +103,3 @@ export function ContactSection() {
     </section>
   );
 }
-
