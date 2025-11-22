@@ -3,7 +3,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { navLinks } from "@/content/data";
 
 export function NavBar() {
@@ -16,14 +15,8 @@ export function NavBar() {
           transition={{ duration: 0.4 }}
           className="flex items-center gap-3"
         >
-          <div className="relative h-9 w-9 overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10 shadow-glow">
-            <Image
-              src="/logo-mark.svg"
-              alt="ReinforceLab logo"
-              fill
-              sizes="48px"
-              priority
-            />
+          <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-indigo via-brand-teal to-brand-sky text-xs font-black uppercase text-white shadow-glow ring-1 ring-white/10">
+            RL
           </div>
           <span className="font-display text-xl">ReinforceLab</span>
         </motion.div>

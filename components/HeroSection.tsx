@@ -3,7 +3,6 @@
 
 import { motion } from "framer-motion";
 import { fadeInUp, staggerChildren } from "@/lib/motion";
-import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -69,18 +68,17 @@ export function HeroSection() {
             Trusted by adaptive intelligence teams
           </span>
           <div className="flex flex-wrap items-center gap-3">
-            {[1, 2, 3, 4].map((id) => (
-              <div
-                key={id}
-                className="relative h-10 w-36 overflow-hidden rounded-xl border border-white/10 bg-white/5"
+            {["ApexOps", "NovaGrid", "Helix", "Vertex", "Atlas"].map((name) => (
+              <motion.div
+                key={name}
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="flex h-10 items-center gap-2 rounded-xl border border-white/10 bg-gradient-to-r from-white/10 via-white/5 to-white/10 px-4"
               >
-                <Image
-                  src="/logos/partner-grid.svg"
-                  alt="Partner logo"
-                  fill
-                  sizes="160px"
-                />
-              </div>
+                <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-brand-indigo via-brand-teal to-brand-sky text-[10px] font-black uppercase text-white">
+                  {name.slice(0, 2)}
+                </span>
+                <span className="text-sm text-white/70">{name}</span>
+              </motion.div>
             ))}
           </div>
         </motion.div>

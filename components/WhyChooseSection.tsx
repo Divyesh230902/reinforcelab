@@ -4,7 +4,6 @@
 import { metrics } from "@/content/data";
 import { fadeInUp, staggerChildren } from "@/lib/motion";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export function WhyChooseSection() {
   return (
@@ -59,16 +58,34 @@ export function WhyChooseSection() {
               whileHover={{ y: -8, scale: 1.03 }}
               className="rounded-2xl bg-white/5 p-4"
             >
-              {metric.icon ? (
-                <div className="mb-3 h-10 w-10 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                  <Image
-                    src={metric.icon}
-                    alt={metric.label}
-                    width={40}
-                    height={40}
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-brand-teal/70 via-brand-indigo/70 to-brand-sky/70 text-white">
+                <svg
+                  viewBox="0 0 48 48"
+                  className="h-7 w-7"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect
+                    x="6"
+                    y="6"
+                    width="36"
+                    height="36"
+                    rx="10"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeOpacity="0.5"
+                    strokeWidth="3"
                   />
-                </div>
-              ) : null}
+                  <path
+                    d="M12 26c0-8 6-16 12-16s12 8 12 16-6 14-12 14c-4 0-8-3-10-7"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <circle cx="24" cy="16" r="3" fill="currentColor" />
+                </svg>
+              </div>
               <p className="text-xs uppercase tracking-[0.2em] text-white/50">
                 {metric.label}
               </p>

@@ -2,7 +2,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
 export function Footer() {
   return (
@@ -10,14 +9,9 @@ export function Footer() {
       <div className="section-container flex flex-col gap-8 py-12 md:flex-row md:items-center md:justify-between">
         <div>
           <div className="flex items-center gap-3">
-            <div className="relative h-8 w-8 overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10">
-              <Image
-                src="/logo-mark.svg"
-                alt="ReinforceLab logo"
-                fill
-                sizes="32px"
-              />
-            </div>
+            <span className="flex h-8 w-8 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-indigo via-brand-teal to-brand-sky text-[10px] font-black uppercase text-white ring-1 ring-white/10">
+              RL
+            </span>
             <p className="font-display text-lg">ReinforceLab</p>
           </div>
           <p className="mt-3 text-xs text-white/50">
