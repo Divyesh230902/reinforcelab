@@ -13,7 +13,7 @@ export function WhyChooseSection() {
         whileInView="visible"
         viewport={viewportConfig}
         variants={staggerChildren}
-        className="grid gap-12 lg:grid-cols-2 lg:items-center"
+        className="grid gap-12"
       >
         <motion.div variants={fadeInUp} className="space-y-5">
           <span className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--flat-lime)]">
@@ -49,33 +49,6 @@ export function WhyChooseSection() {
               metrics.
             </li>
           </ul>
-        </motion.div>
-        <motion.div
-          variants={fadeInUp}
-          className="anime-metrics glass-panel overflow-hidden rounded-3xl p-6"
-        >
-          <div className="metrics-marquee" aria-label="ReinforceLab key metrics">
-            <div className="metrics-track">
-              {metrics.map((metric) => (
-                <div key={metric.label} className="metric-card">
-                  <p className="metric-label">{metric.label}</p>
-                  <p className="metric-stat">{metric.stat}</p>
-                  <p className="metric-copy">{metric.description}</p>
-                </div>
-              ))}
-              {metrics.map((metric) => (
-                <div
-                  key={`${metric.label}-dup`}
-                  className="metric-card"
-                  aria-hidden="true"
-                >
-                  <p className="metric-label">{metric.label}</p>
-                  <p className="metric-stat">{metric.stat}</p>
-                  <p className="metric-copy">{metric.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </motion.div>
       </motion.div>
     </section>

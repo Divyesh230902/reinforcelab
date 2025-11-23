@@ -36,6 +36,14 @@ export default function RootLayout({
               loop: true
             });
 
+            anime({
+              targets: '.hero-roller-track',
+              translateX: ['0%', '-50%'],
+              duration: 26000,
+              easing: 'linear',
+              loop: true
+            });
+
             const observer = new IntersectionObserver((entries) => {
               entries.forEach((entry) => {
                 if (entry.isIntersecting) {

@@ -3,12 +3,13 @@
 
 import { motion } from "framer-motion";
 import { fadeInUp, staggerChildren } from "@/lib/motion";
+import { metrics } from "@/content/data";
 
 export function HeroSection() {
   return (
     <section
       id="hero"
-      className="section-container flex flex-col gap-12 pb-24 pt-16 lg:flex-row lg:items-center lg:gap-16 lg:pt-28"
+      className="anime-hero section-container flex flex-col gap-12 pb-24 pt-16 lg:flex-row lg:items-center lg:gap-16 lg:pt-28"
     >
       <motion.div
         variants={staggerChildren}
@@ -30,7 +31,7 @@ export function HeroSection() {
         </motion.h1>
         <motion.p
           variants={fadeInUp}
-          className="mt-2 text-lg font-semibold text-brand-teal"
+          className="mt-2 text-lg font-semibold text-[var(--flat-lime)]"
         >
           Agentic Guardrails for every adaptive decision.
         </motion.p>
@@ -67,63 +68,18 @@ export function HeroSection() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         className="w-full lg:w-1/2"
       >
-        <div className="glass-panel relative overflow-hidden rounded-3xl p-8 shadow-glow">
-          <div className="absolute inset-0 bg-gradient-conic opacity-60" />
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 22, ease: "linear", repeat: Infinity }}
-            className="pointer-events-none absolute -left-16 -top-16 h-60 w-60 rounded-full border border-brand-indigo/30"
-          />
-          <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 26, ease: "linear", repeat: Infinity }}
-            className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full border border-brand-teal/25"
-          />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(40,208,200,0.18),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(57,69,255,0.16),transparent_32%),radial-gradient(circle_at_60%_70%,rgba(91,208,255,0.12),transparent_30%)] simulation-grid" />
-          <div className="relative space-y-6">
-            <div className="flex items-center justify-between">
-              <p className="font-display text-4xl text-white">8-12 mo</p>
-              <span className="text-xs uppercase tracking-[0.2em] text-white/60">
-                ROI Realized
-              </span>
-            </div>
-            <div className="grid grid-cols-2 gap-4 text-sm text-white/70">
-              <motion.div
-                whileHover={{ y: -6, scale: 1.02 }}
-                className="rounded-2xl bg-white/5 p-4"
-              >
-                <p className="text-xs uppercase text-white/50">AgentOps</p>
-                <p className="mt-2 text-lg font-semibold text-white">45+</p>
-                <p>Adaptive monitors across deployments</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -6, scale: 1.02 }}
-                className="rounded-2xl bg-white/5 p-4"
-              >
-                <p className="text-xs uppercase text-white/50">
-                  Agentic Guardrails
-                </p>
-                <p className="mt-2 text-lg font-semibold text-white">
-                  Zero-Trust
-                </p>
-                <p>Alignment controls and runtime safety</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -6, scale: 1.02 }}
-                className="rounded-2xl bg-white/5 p-4"
-              >
-                <p className="text-xs uppercase text-white/50">Policy Library</p>
-                <p className="mt-2 text-lg font-semibold text-white">120+</p>
-                <p>Reusable RL templates</p>
-              </motion.div>
-              <motion.div
-                whileHover={{ y: -6, scale: 1.02 }}
-                className="rounded-2xl bg-white/5 p-4"
-              >
-                <p className="text-xs uppercase text-white/50">Impact</p>
-                <p className="mt-2 text-lg font-semibold text-white">3x</p>
-                <p>Average uplift across pricing and ops pilots</p>
-              </motion.div>
+        <div className="glass-panel relative overflow-hidden rounded-3xl p-0">
+          <div className="hero-roller">
+            <div className="hero-roller-track">
+              {[...metrics, ...metrics].map((metric, idx) => (
+                <div className="metric-card anime-card p-5" key={`${metric.label}-${idx}`}>
+                  <p className="metric-label text-xs uppercase tracking-[0.2em]">
+                    {metric.label}
+                  </p>
+                  <p className="metric-stat mt-2 text-2xl font-semibold">{metric.stat}</p>
+                  <p className="metric-copy mt-2 text-xs">{metric.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

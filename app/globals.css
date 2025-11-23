@@ -72,6 +72,7 @@ body {
   border-radius: 6px;
   box-shadow: none;
   overflow: hidden;
+  padding: 1.25rem;
 }
 
 .anime-card::before,
@@ -246,6 +247,16 @@ ul li span[class*="bg-"] {
   pointer-events: none;
 }
 
+.hero-roller {
+  overflow: hidden;
+  padding: 1.25rem;
+}
+
+.hero-roller-track {
+  display: flex;
+  gap: 1rem;
+}
+
 /* Section dividers */
 .section-container + .section-container {
   position: relative;
@@ -306,6 +317,7 @@ footer a:focus-visible::after {
   display: flex;
   gap: 1rem;
   animation: metrics-scroll 32s linear infinite;
+  align-items: stretch;
 }
 
 .metrics-marquee:hover .metrics-track {
@@ -368,6 +380,10 @@ footer a:focus-visible::after {
 
 @media (prefers-reduced-motion: reduce) {
   .metrics-track {
+    animation: none;
+    transform: none !important;
+  }
+  .hero-roller-track {
     animation: none;
     transform: none !important;
   }
