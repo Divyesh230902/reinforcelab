@@ -43,7 +43,7 @@ export function SolutionsGallery() {
             key={solution.name}
             variants={fadeInUp}
             whileHover={{ y: -10, scale: 1.02 }}
-            className="anime-card relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 transition"
+            className="anime-card anime-card-green relative overflow-hidden rounded-2xl p-6 transition"
           >
             <div className="absolute inset-0 bg-gradient-conic opacity-10" />
             <div className="relative">

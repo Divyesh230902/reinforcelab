@@ -68,7 +68,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         className="w-full lg:w-1/2"
       >
-        <div className="glass-panel relative overflow-hidden rounded-3xl p-0">
+        <div className="anime-metrics glass-panel relative overflow-hidden rounded-3xl p-0">
           <div className="hero-roller">
             <div className="hero-roller-track">
               {[...metrics, ...metrics].map((metric, idx) => (

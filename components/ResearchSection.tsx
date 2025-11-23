@@ -42,7 +42,7 @@ export function ResearchSection() {
           <motion.div
             key={pillar.name}
             variants={fadeInUp}
-            className="anime-card glass-panel rounded-2xl p-6"
+            className="anime-card anime-card-green glass-panel rounded-2xl p-6"
           >
             <h3 className="font-display text-xl text-white">{pillar.name}</h3>
             <p className="mt-3 text-sm text-white/70">{pillar.description}</p>

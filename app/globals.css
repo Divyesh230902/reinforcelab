@@ -3,40 +3,154 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: only dark;
-  --flat-yellow: #ffe84a;
-  --flat-lime: #c6ff4a;
-  --flat-green: #5cff8a;
-  --charcoal: #0d0d0d;
-  --iron: #1a1a1a;
-  --offwhite: #f2f2f2;
-  --mint: #a8ffd1;
-  --slate-orange: #d88a3b;
-  --pale-white: #f6f4ed;
-  --pale-white-2: #e8e4dc;
+  --pale-dull-white: #f7f6f2;
+  --pale-slate-orange: #e7b38b;
+  --dull-green: #a8c69f;
+  --pale-yellow: #f6e8a8;
+  --green-border: #8baf88;
+  --yellow-border: #e2d28f;
+  --text-dark: #1a1a1a;
+  --input-fill: #fefcef;
+  --input-border: #d7cfc0;
 }
 
-body {
-  @apply text-white antialiased;
+/* Global */
+body.anime-body {
+  background-color: var(--pale-dull-white);
+  color: var(--text-dark);
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.anime-ui {
-  min-height: 100vh;
-  background: linear-gradient(160deg, var(--pale-white) 0%, var(--pale-white-2) 100%);
-  position: relative;
+.anime-body * {
+  color: var(--text-dark);
 }
 
-.tech-grid {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-size: 120px 120px;
-  background-image:
-    linear-gradient(30deg, rgba(255, 232, 74, 0.08) 12%, transparent 12%),
-    linear-gradient(-30deg, rgba(92, 255, 138, 0.08) 12%, transparent 12%),
-    linear-gradient(90deg, rgba(255, 232, 74, 0.05) 1px, transparent 1px);
-  opacity: 0.05;
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+/* Header */
+.anime-header {
+  background-color: var(--pale-slate-orange);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #dca47e;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.anime-header a {
+  color: var(--text-dark);
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+/* Footer */
+.anime-footer {
+  background-color: var(--pale-slate-orange);
+  color: var(--text-dark);
+  padding: 30px 20px;
+  border-top: 2px solid #dca47e;
+}
+
+.anime-footer a {
+  color: var(--text-dark);
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+/* Sections */
+.anime-hero {
+  padding: 80px 20px;
+}
+
+.anime-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Cards */
+.anime-card {
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  box-shadow: none;
+}
+
+.anime-card-green {
+  background-color: var(--dull-green);
+  border: 2px solid var(--green-border);
+}
+
+.anime-card-yellow {
+  background-color: var(--pale-yellow);
+  border: 2px solid var(--yellow-border);
+}
+
+.metric-card {
+  background-color: var(--pale-yellow);
+  border: 2px solid var(--yellow-border);
+  padding: 20px;
+  display: inline-block;
+  min-width: 200px;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.metric-card::before,
+.metric-card::after {
+  border-color: var(--yellow-border);
+}
+
+/* Text */
+h1, h2, h3, p {
+  color: var(--text-dark);
+}
+
+h1, h2, h3 {
+  margin-bottom: 12px;
+}
+
+p {
+  line-height: 1.55;
+}
+
+/* Contact form */
+.anime-contact input,
+.anime-contact textarea,
+.anime-contact select {
+  width: 100%;
+  background-color: var(--input-fill);
+  border: 2px solid var(--input-border);
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+.anime-contact button {
+  background-color: var(--dull-green);
+  border: 2px solid var(--green-border);
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+.anime-contact button:hover {
+  background-color: #8ebb86;
 }
 
 .section-container {
@@ -70,9 +184,7 @@ body {
 .anime-card,
 .metric-card {
   position: relative;
-  background: linear-gradient(170deg, #151515, #1a1a1a);
-  border: 2px solid var(--flat-lime);
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: none;
   overflow: hidden;
   padding: 1.25rem;
@@ -86,7 +198,7 @@ body {
   position: absolute;
   width: 18px;
   height: 18px;
-  border: 2px solid var(--flat-yellow);
+  border: 2px solid var(--green-border);
 }
 
 .anime-card::before,
@@ -142,7 +254,7 @@ header nav a::after {
   right: 0;
   bottom: -4px;
   height: 2px;
-  background: linear-gradient(90deg, var(--flat-yellow), var(--flat-green));
+  background: linear-gradient(90deg, var(--pale-yellow), var(--dull-green));
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.2s ease;
@@ -160,8 +272,8 @@ button.rounded-full,
   position: relative;
   overflow: hidden;
   background: transparent;
-  color: var(--offwhite);
-  border: 2px solid var(--flat-lime);
+  color: var(--text-dark);
+  border: 2px solid var(--dull-green);
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -180,8 +292,8 @@ a.rounded-full:hover,
 button.rounded-full:hover,
 .anime-btn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, var(--flat-yellow), var(--flat-green));
-  color: var(--charcoal);
+  background: var(--dull-green);
+  color: var(--text-dark);
 }
 
 a.rounded-full:hover::after,
@@ -199,7 +311,7 @@ button.rounded-full:active,
 /* Lists */
 ul li span[class*="bg-"] {
   box-shadow: none;
-  background-color: var(--flat-lime) !important;
+  background-color: var(--dull-green) !important;
 }
 
 
@@ -207,17 +319,17 @@ ul li span[class*="bg-"] {
 .title-underline {
   width: 0%;
   height: 2px;
-  background: var(--flat-yellow);
+  background: var(--pale-yellow);
   margin: 8px auto 0;
 }
 
 /* Metrics */
 .metric-label {
-  color: var(--flat-green);
+  color: var(--dull-green);
 }
 
 .metric-stat {
-  color: var(--flat-yellow);
+  color: var(--pale-yellow);
 }
 
 .metric-copy {
@@ -228,16 +340,16 @@ ul li span[class*="bg-"] {
 .anime-contact select,
 .anime-contact textarea {
   background: rgba(20, 20, 20, 0.9);
-  border: 2px solid var(--flat-lime);
+  border: 2px solid var(--dull-green);
   border-radius: 6px;
-  color: var(--offwhite);
+  color: var(--text-dark);
 }
 
 .anime-contact input:focus,
 .anime-contact select:focus,
 .anime-contact textarea:focus {
   outline: none;
-  border-color: var(--flat-yellow);
+  border-color: var(--pale-yellow);
 }
 
 .ripple {
@@ -245,7 +357,7 @@ ul li span[class*="bg-"] {
   width: 120px;
   height: 120px;
   border-radius: 9999px;
-  background: var(--flat-lime);
+  background: var(--dull-green);
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -287,7 +399,7 @@ ul li span[class*="bg-"] {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--flat-lime), transparent);
+  background: linear-gradient(90deg, transparent, var(--dull-green), transparent);
 }
 
 /* Footer */
@@ -312,7 +424,7 @@ footer a::after {
   right: 0;
   bottom: -3px;
   height: 2px;
-  background: linear-gradient(90deg, var(--flat-lime), var(--flat-green));
+  background: linear-gradient(90deg, var(--dull-green), var(--pale-yellow));
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.2s ease;

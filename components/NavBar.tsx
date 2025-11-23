@@ -7,7 +7,7 @@ import { navLinks } from "@/content/data";
 
 export function NavBar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-brand-charcoal/70 backdrop-blur-xl">
+    <header className="anime-header sticky top-0 z-40">
       <div className="section-container flex items-center justify-between py-4">
         <motion.div
           initial={{ opacity: 0, y: -16 }}

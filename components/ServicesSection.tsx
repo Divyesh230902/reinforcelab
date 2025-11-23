@@ -43,7 +43,7 @@ export function ServicesSection() {
             key={service.name}
             variants={fadeInUp}
             whileHover={{ y: -8, scale: 1.02 }}
-            className="glass-panel flex h-full flex-col rounded-3xl p-6"
+            className="anime-card anime-card-green glass-panel flex h-full flex-col rounded-3xl p-6"
           >
             <div className="flex items-center gap-3">
               <span className="h-10 w-10 rounded-2xl bg-white/8 ring-1 ring-white/10" />
