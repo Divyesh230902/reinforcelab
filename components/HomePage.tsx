@@ -9,7 +9,6 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { SolutionsGallery } from "@/components/SolutionsGallery";
 import { WhyChooseSection } from "@/components/WhyChooseSection";
 import { WhyRLSection } from "@/components/WhyRLSection";
-import { BrandAssetsSection } from "@/components/BrandAssetsSection";
 
 export function HomePage() {
   return (
@@ -29,8 +28,6 @@ export function HomePage() {
         <ResearchSection />
         {/* --- Section: Why Choose ReinforceLab --- */}
         <WhyChooseSection />
-        {/* --- Section: Brand Assets --- */}
-        <BrandAssetsSection />
         {/* --- Section: About & Vision --- */}
         <AboutVisionSection />
         {/* --- Section: Contact --- */}
