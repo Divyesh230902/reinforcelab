@@ -256,10 +256,20 @@ ul li span[class*="bg-"] {
   display: flex;
   gap: 1rem;
   width: max-content;
+  animation: hero-scroll 20s linear infinite;
 }
 
 .hero-roller-track .metric-card {
   flex: 0 0 auto;
+}
+
+@keyframes hero-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Section dividers */
