@@ -4,14 +4,63 @@
 
 :root {
   color-scheme: only dark;
+  --anime-yellow: #ffe84a;
+  --anime-lime: #c6ff4a;
+  --anime-green: #5cff8a;
+  --anime-cyan: #7bfff9;
+  --anime-emerald: #0c6633;
+  --anime-charcoal: #0d0d0d;
+  --anime-carbon: #1a1a1a;
+  --anime-offwhite: #fafafa;
 }
 
 body {
   @apply bg-brand-charcoal text-white antialiased;
 }
 
+/* Anime-inspired global background */
+.anime-ui {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--anime-charcoal), var(--anime-carbon));
+  position: relative;
+}
+
+.anime-ui::before,
+.anime-ui::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.anime-ui::before {
+  background-image:
+    repeating-linear-gradient(120deg, rgba(255, 232, 74, 0.04) 0, rgba(255, 232, 74, 0.04) 2px, transparent 2px, transparent 18px),
+    repeating-linear-gradient(60deg, rgba(124, 255, 249, 0.03) 0, rgba(124, 255, 249, 0.03) 1px, transparent 1px, transparent 14px);
+  opacity: 0.9;
+}
+
+.anime-ui::after {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(92, 255, 138, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(255, 232, 74, 0.10), transparent 28%),
+    radial-gradient(circle at 60% 70%, rgba(124, 255, 249, 0.12), transparent 32%);
+  filter: blur(24px);
+  opacity: 0.9;
+}
+
 .glass-panel {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-glow;
+  position: relative;
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(13, 13, 13, 0.8));
+  border: 1.5px solid rgba(124, 255, 249, 0.22);
+  box-shadow:
+    0 10px 40px rgba(92, 255, 138, 0.2),
+    0 0 0 1px rgba(255, 232, 74, 0.12),
+    0 0 24px rgba(124, 255, 249, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 
 .section-container {
@@ -34,6 +83,7 @@ body {
   justify-content: center;
   min-width: 3rem;
   min-height: 3rem;
+  text-shadow: 0 0 12px rgba(92, 255, 138, 0.4);
 }
 
 @keyframes bg-pan {
@@ -52,6 +102,204 @@ body {
   background-size: 200% 200%;
   animation: bg-pan 18s ease-in-out infinite;
   mix-blend-mode: screen;
+}
+
+/* Navigation */
+header {
+  background: rgba(13, 13, 13, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 232, 74, 0.18);
+  box-shadow: 0 8px 30px rgba(92, 255, 138, 0.18);
+}
+
+header nav a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--anime-yellow), var(--anime-green));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+header nav a:hover::after,
+header nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Buttons */
+a.rounded-full,
+button.rounded-full {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--anime-yellow), var(--anime-green));
+  color: var(--anime-charcoal);
+  box-shadow: 0 8px 24px rgba(92, 255, 138, 0.35), 0 0 0 1px rgba(255, 232, 74, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.rounded-full::after,
+button.rounded-full::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+a.rounded-full:hover,
+button.rounded-full:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(92, 255, 138, 0.45), 0 0 0 1px rgba(255, 232, 74, 0.28);
+}
+
+a.rounded-full:hover::after,
+button.rounded-full:hover::after {
+  opacity: 1;
+}
+
+a.rounded-full:active,
+button.rounded-full:active {
+  transform: translateY(0);
+}
+
+/* Section titles hover glow */
+.section-title:hover {
+  text-shadow: 0 0 14px rgba(92, 255, 138, 0.7);
+}
+
+/* Lists */
+ul li span.bg-brand-indigo,
+ul li span.bg-brand-teal,
+ul li span.bg-brand-sky,
+ul li span.bg-white\\/70 {
+  box-shadow: 0 0 10px rgba(198, 255, 74, 0.6);
+}
+
+/* Card accents */
+.glass-panel::before,
+.glass-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.glass-panel::before {
+  border: 1px solid rgba(255, 232, 74, 0.12);
+  mix-blend-mode: screen;
+}
+
+.glass-panel::after {
+  background: linear-gradient(120deg, rgba(124, 255, 249, 0.12), transparent 35%, rgba(255, 232, 74, 0.08));
+  opacity: 0.9;
+}
+
+.glass-panel:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 40px rgba(92, 255, 138, 0.32),
+    0 0 0 1px rgba(255, 232, 74, 0.24),
+    0 0 26px rgba(124, 255, 249, 0.18);
+}
+
+/* Metrics HUD */
+.metric-card {
+  border: 1.5px solid rgba(124, 255, 249, 0.3);
+  box-shadow: 0 6px 18px rgba(92, 255, 138, 0.2), 0 0 16px rgba(255, 232, 74, 0.12);
+  background: linear-gradient(160deg, rgba(26, 26, 26, 0.95), rgba(13, 13, 13, 0.85));
+}
+
+.metric-label {
+  color: var(--anime-cyan);
+}
+
+.metric-stat {
+  color: var(--anime-yellow);
+  text-shadow: 0 0 10px rgba(255, 232, 74, 0.6);
+}
+
+.metric-copy {
+  color: rgba(250, 250, 250, 0.75);
+}
+
+.metric-label::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, var(--anime-cyan), transparent);
+}
+
+/* Services/Solutions/Research card tweaks */
+.glass-panel h3,
+.glass-panel h2,
+.glass-panel p {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-panel .card-accent {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(124, 255, 249, 0.5);
+}
+
+/* Section dividers */
+.section-container + .section-container {
+  position: relative;
+}
+
+.section-container + .section-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--anime-green), transparent);
+  box-shadow: 0 0 12px rgba(92, 255, 138, 0.6);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid rgba(124, 255, 249, 0.2);
+  background: rgba(13, 13, 13, 0.85);
+  box-shadow: 0 -6px 20px rgba(92, 255, 138, 0.18);
+}
+
+footer a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--anime-lime), var(--anime-green));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+footer a:hover::after,
+footer a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 /* Metrics marquee */
