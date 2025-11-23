@@ -51,51 +51,30 @@ export function WhyChooseSection() {
         </motion.div>
         <motion.div
           variants={fadeInUp}
-          className="glass-panel grid gap-6 rounded-3xl p-6 md:grid-cols-3"
+          className="glass-panel overflow-hidden rounded-3xl p-6"
         >
-          {metrics.map((metric) => (
-            <motion.div
-              key={metric.label}
-              whileHover={{ y: -8, scale: 1.03 }}
-              className="rounded-2xl bg-white/5 p-4"
-            >
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-brand-teal/70 via-brand-indigo/70 to-brand-sky/70 text-white">
-                <svg
-                  viewBox="0 0 48 48"
-                  className="h-7 w-7"
+          <div className="metrics-marquee" aria-label="ReinforceLab key metrics">
+            <div className="metrics-track">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="metric-card">
+                  <p className="metric-label">{metric.label}</p>
+                  <p className="metric-stat">{metric.stat}</p>
+                  <p className="metric-copy">{metric.description}</p>
+                </div>
+              ))}
+              {metrics.map((metric) => (
+                <div
+                  key={`${metric.label}-dup`}
+                  className="metric-card"
                   aria-hidden="true"
-                  focusable="false"
                 >
-                  <rect
-                    x="6"
-                    y="6"
-                    width="36"
-                    height="36"
-                    rx="10"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeOpacity="0.5"
-                    strokeWidth="3"
-                  />
-                  <path
-                    d="M12 26c0-8 6-16 12-16s12 8 12 16-6 14-12 14c-4 0-8-3-10-7"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <circle cx="24" cy="16" r="3" fill="currentColor" />
-                </svg>
-              </div>
-              <p className="text-xs uppercase tracking-[0.2em] text-white/50">
-                {metric.label}
-              </p>
-              <p className="mt-4 font-display text-3xl text-white">
-                {metric.stat}
-              </p>
-              <p className="mt-2 text-xs text-white/60">{metric.description}</p>
-            </motion.div>
-          ))}
+                  <p className="metric-label">{metric.label}</p>
+                  <p className="metric-stat">{metric.stat}</p>
+                  <p className="metric-copy">{metric.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

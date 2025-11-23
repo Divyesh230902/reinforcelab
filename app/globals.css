@@ -53,3 +53,80 @@ body {
   animation: bg-pan 18s ease-in-out infinite;
   mix-blend-mode: screen;
 }
+
+/* Metrics marquee */
+.metrics-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.metrics-track {
+  display: flex;
+  gap: 1rem;
+  animation: metrics-scroll 32s linear infinite;
+}
+
+.metrics-marquee:hover .metrics-track {
+  animation-play-state: paused;
+}
+
+.metrics-marquee:focus-within .metrics-track {
+  animation-play-state: paused;
+}
+
+.metric-card {
+  flex: 0 0 28%;
+  min-width: 14rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metric-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.metric-stat {
+  font-family: var(--font-display, inherit);
+  font-size: 2rem;
+  color: #fff;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.metric-copy {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+@keyframes metrics-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 500px) {
+  .metrics-track {
+    animation: none;
+    flex-direction: column;
+  }
+  .metric-card {
+    flex: 1 1 auto;
+    min-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metrics-track {
+    animation: none;
+    transform: none !important;
+  }
+}
